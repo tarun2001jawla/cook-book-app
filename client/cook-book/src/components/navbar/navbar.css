@@ -1,0 +1,93 @@
+/* General Styles */
+.navbar {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(15px);
+  box-shadow: none;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar.scrolled {
+  background: #2c3e50;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Logo and Brand */
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #3498db;
+  transition: color 0.3s ease;
+}
+
+.logo-text:hover {
+  color: #2980b9;
+}
+
+/* Search Input */
+.search-container {
+  flex: 1;
+  max-width: 400px;
+  margin: 0 1.5rem;
+}
+
+.search-input {
+  border: 2px solid #ecf0f1;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+.search-icon {
+  color: #7f8c8d;
+  transition: color 0.3s ease;
+}
+
+.search-icon.focused {
+  color: #3498db;
+}
+
+/* Buttons */
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
+.nav-button {
+  background: transparent;
+  color: #3498db;
+  border: 2px solid #3498db;
+  margin-right: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-button:hover {
+  background: #3498db;
+  color: #fff;
+}
+
+.signup-button {
+  background: #e74c3c;
+  color: #fff;
+  border: none;
+}
+
+.signup-button:hover {
+  background: #c0392b;
+}
