@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:13
+    restart: always
+    environment:
+      - POSTGRES_USER=tarunjawla
+      - POSTGRES_PASSWORD=tarunjawla
+      - POSTGRES_DB=cookbook_db
+    ports:
+      - '5435:5432'
+
