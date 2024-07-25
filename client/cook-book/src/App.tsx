@@ -7,9 +7,13 @@ import SignInPage from './components/login/login';
 import { AuthProvider } from './components/context/AuthContext';4
 import RecipeForm from './components/Recipeform/recipeform';
 import './App.css';
-
+import RecipesFromAPI from './components/ApiRecipes/Api';
+import { QueryClient, QueryClientProvider } from 'react-query';
+// Create a client
+const queryClient = new QueryClient();
 function App() {
   return (
+    <QueryClientProvider client={queryClient}>
     <ChakraProvider>
       <AuthProvider>
       <Router>
@@ -19,10 +23,12 @@ function App() {
           <Route path="/signup" element={<RegisterForm />} />
           <Route path="/login" element={<SignInPage />} />
           <Route path="/add-recipe" element={<RecipeForm />} />
+          <Route path="/api-recipes" element={<RecipesFromAPI />} />
         </Routes>
       </Router>
       </AuthProvider>
     </ChakraProvider>
+    </QueryClientProvider>
   );
 }
 

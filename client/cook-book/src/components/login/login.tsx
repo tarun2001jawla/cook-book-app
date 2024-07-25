@@ -38,7 +38,7 @@ const SignInPage: React.FC = () => {
           isClosable: true,
         });
         navigate('/');
-        window.location.reload();
+        location.reload();
       } else {
         throw new Error('Login failed');
       }
