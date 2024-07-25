@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Box, Button, FormControl, FormLabel, Input, VStack, useToast, Heading } from '@chakra-ui/react';
 import axios from 'axios';
-import './signup.css'; // Import your custom CSS
+import './signup.css'; 
 
 const SignupPage: React.FC = () => {
   const [formData, setFormData] = useState({
