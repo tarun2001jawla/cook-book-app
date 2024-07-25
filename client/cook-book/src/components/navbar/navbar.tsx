@@ -21,7 +21,7 @@ const NavBar: React.FC = () => {
   }, []);
 
   const handleLogout = () => {
-    document.cookie = 'jwt=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/';
+    document.cookie = 'jwt=; expires=Thu, 01 Jan 1970 00:00:00 GMT;';
     navigate('/');
     window.location.reload();
   };
@@ -32,7 +32,7 @@ const NavBar: React.FC = () => {
   return (
     <Box as="nav" className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <Flex align="center" justify="space-between" wrap="wrap" padding="1rem 2rem" maxWidth="1200px" margin="0 auto">
-        {/* Logo and Brand Name */}
+    
         <Flex align="center" className="logo-container">
           <Image src="../../../public/logo.png" alt="Cook-Book Logo" height="50px" mr={3} />
           <Text fontSize="2xl" fontWeight="bold" className="logo-text">
@@ -64,6 +64,9 @@ const NavBar: React.FC = () => {
               <Link to="/add-recipe">
                 <Button className="nav-button add-recipe-button">Add Recipe</Button>
               </Link>
+              <Link to="/api-recipes">
+              <Button className="nav-button login-button">API</Button>
+              </Link>
               <Button className="nav-button logout-button" onClick={handleLogout}>Logout</Button>
             </>
           ) : (
@@ -71,6 +74,7 @@ const NavBar: React.FC = () => {
               <Link to="/login">
                 <Button className="nav-button login-button">Login</Button>
               </Link>
+              
               <Link to="/signup">
                 <Button className="nav-button signup-button">Signup</Button>
               </Link>

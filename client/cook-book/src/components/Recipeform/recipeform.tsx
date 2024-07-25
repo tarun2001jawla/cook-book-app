@@ -10,8 +10,8 @@ const RecipeForm: React.FC = () => {
     name: '',
     instructions: '',
     thumbnail: '',
-    postedAt: new Date().toISOString().split('T')[0], // Current date in YYYY-MM-DD format
-    postedBy: '', // Initialize as an empty string
+    postedAt: new Date().toISOString().split('T')[0], 
+    postedBy: '', 
     ingredients: '',
   });
 
@@ -23,7 +23,7 @@ const RecipeForm: React.FC = () => {
     if (user) {
       setFormData(prevData => ({
         ...prevData,
-        postedBy: user.name ?? '', // Ensure `postedBy` is a string
+        postedBy: user.name ?? '',
       }));
     }
   }, [user]);
@@ -47,7 +47,7 @@ const RecipeForm: React.FC = () => {
         duration: 5000,
         isClosable: true,
       });
-      navigate('/home');
+      navigate('/');
     } catch (error) {
       toast({
         title: "An error occurred.",
@@ -106,7 +106,7 @@ const RecipeForm: React.FC = () => {
               />
             </FormControl>
 
-            <FormControl id="thumbnail" isRequired>
+            <FormControl id="thumbnail" >
               <FormLabel className="form-label">Thumbnail Image URL</FormLabel>
               <Input
                 type="text"
